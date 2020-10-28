@@ -1,9 +1,9 @@
 FROM maven:3.6.0-jdk-11-slim AS build
-COPY src /home/app/src
-COPY pom.xml /home/app
-RUN mvn -f /home/app/pom.xml clean package
+COPY src /usr/src/app/src
+COPY pom.xml /usr/src//app
+RUN mvn -f /usr/src/app/pom.xml clean package
 
 FROM java:8
 EXPOSE 8080
-ADD /target/project-test-github-1.0-SNAPSHOT.jar project-test-github-1.0-SNAPSHOT.jar
-ENTRYPOINT ["java","-jar","project-test-github-1.0-SNAPSHOT.jar"]
+COPY --from=build /usr/src/app/target/project-test-github-1.0-SNAPSHOT.jar /usr/app/project-test-github-1.0-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","/usr/app/project-test-github-1.0-SNAPSHOT.jar"]
