@@ -2,6 +2,11 @@ name: Build and test of Java Project
 
 on: [push]
 
-runs:
-using: "docker"
-image: "Dockerfile"
+jobs:
+  build:
+    name: Build with Docker
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./action-docker
