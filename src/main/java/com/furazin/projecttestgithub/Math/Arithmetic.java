@@ -1,4 +1,4 @@
-package com.furazin.projecttestgithub;
+package com.furazin.projecttestgithub.Math;
 
 public class Arithmetic {
     private int a;

@@ -1,5 +1,6 @@
 package com.furazin.projecttestgithub;
 
+import com.furazin.projecttestgithub.Math.Arithmetic;
 import org.junit.Assert;
 import org.junit.Test;
 
