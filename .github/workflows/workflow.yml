@@ -9,5 +9,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Set up JDK 1.8
+      - name: Building the image from the Dockerfile
         uses: ./.github/actions
