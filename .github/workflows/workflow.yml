@@ -10,4 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Building the image from the Dockerfile
-        uses: ./.github/actions
+        uses: ./.github/action-docker
