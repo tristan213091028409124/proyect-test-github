@@ -23,5 +23,9 @@ public class Arithmetic {
 
     public int div() {
         return a/b;
-    }    
+    }
+
+    public int pow(){
+        return a*a;
+    }
 }
